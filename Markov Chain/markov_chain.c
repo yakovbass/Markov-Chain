@@ -87,9 +87,9 @@ int fill_database(FILE *fp, long words_to_read, MarkovChain *markov_chain) {
     }
     MarkovNode *save_last_one = NULL;
     while (fgets(row, MAX_LEN_ROW, fp)
-           != NULL && start_chain < words_to_read) {
+           != NULL && (words_to_read == -1 || start_chain < words_to_read)) {
         char *token = strtok(row, DELIMITERS);
-        while (token && words_to_read != -1 && start_chain < words_to_read) {
+        while (token) {
             Node *has_node = get_node_from_database(markov_chain, token);
             if (has_node == NULL) {
                 has_node = add_to_database(markov_chain, token);
