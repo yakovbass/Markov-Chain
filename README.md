@@ -1,11 +1,11 @@
-Overview
+**Overview**
 
 This project implements a Markov Chain–based text generator in C.
 The program reads a text file, builds a Markov Chain from the words in the file, and then generates random “tweets” based on word transition frequencies.
 
 Each word is treated as a state in the Markov Chain, and transitions between words are weighted by how often they appear consecutively in the input text.
 
-How It Works
+**How It Works**
 
 The program reads an input text file and splits it into words.
 
@@ -29,7 +29,7 @@ Implements a simple singly linked list used to store all Markov nodes.
 markov_chain.c / markov_chain.h
 Contains the Markov Chain logic:
 
-Database creation
+**Database creation**
 
 Frequency list management
 
@@ -50,7 +50,7 @@ Builds the Markov Chain
 
 Generates and prints tweets
 
-Compilation
+**Compilation**
 
 Compile the program using gcc:
 
@@ -96,7 +96,7 @@ The Markov Chain owns all allocated words and frequency lists.
 
 The program avoids memory leaks and double frees.
 
-Notes
+**Notes**
 
 The program uses only standard C libraries.
 
