@@ -57,7 +57,7 @@ Compile the program using gcc:
 gcc tweets_generator.c markov_chain.c linked_list.c -o tweets_generator
 
 Usage
-./tweets_generator <seed> <num_of_tweets> <path_to_text_file> [max_words]
+./tweets_generator <seed> <num_of_tweets>  [max_words] <path_to_text_file>
 
 Arguments
 
@@ -65,14 +65,14 @@ seed – Seed for the random number generator
 
 num_of_tweets – Number of tweets to generate
 
-path_to_text_file – Path to the input text file
-
 max_words (optional) – Maximum number of words to read from the file
+
+path_to_text_file – Path to the input text file
 
 If omitted, the entire file is used
 
 Example
-./tweets_generator 42 5 corpus.txt 1000
+./tweets_generator 42 5 1000 corpus.txt
 
 
 This command generates 5 tweets using up to 1000 words from corpus.txt.
